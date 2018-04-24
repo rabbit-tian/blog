@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+body,form,textarea,select,option,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dt,dd,menu,blockquote,fieldset,legend,button,input,hr,pre{margin: 0;padding: 0;}
+body{font-family:Arial,Helvetica,sans-serif;font-size:12px;
+    background:url(../images/bodyBg.png) center top no-repeat;}
+ul,ol,img{border:0px;}
+li{list-style-type:none;}
+input,select,textarea{vertical-align:middle;outline:none;}
+a{text-decoration:none;}
+a:hover{}
+input[type="button"]:hover{
+	cursor: pointer;
+}
+.clear{clear:both;font-size:0;height:0;line-height:0;}
+.clearfix{overflow:hidden;zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+
