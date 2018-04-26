@@ -5,6 +5,6 @@
 
 2. ios顺滑问题
     - `html{-webkit-overflow-scrolling:touch}`
-
+3. header 脱离文档流后，注意顶部的空档
 
 
