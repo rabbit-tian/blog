@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>课程机</title>
+	<link rel="stylesheet" type="text/css" href="css/hack.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/video-js.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/video.min.js"></script>
+	<script src="js/responsive.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="js/CXJSBridge.js"></script>
+	<script type="text/javascript">
+		function processQuit() {
+			jsBridge.postNotification('CLIENT_EXIT_WEBAPP', { message: '' });
+		};
+	</script>
+</head>
+
+<body>
+	<div class="bane">
+		<div class="header2">
+			<div onclick="processQuit()" class="back-box">
+				<a href="2-直播讲座.html">
+					<img src="images/back.png">
+				</a>
+			</div>
+			
+			<!-- <img src="images/title3.png"> -->
+			<h3>现场直播</h3>
+		</div>
+		<div class="player-box">
+			<video id="my-player" class="video-js vjs-big-play-centered" controls preload="auto" poster="images/videobg.png" data-setup='{}'>
+				<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+				<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/webm"></source>
+				<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/ogg"></source>
+				<p class="vjs-no-js">
+					To view this video please enable JavaScript, and consider upgrading to a web browser that
+					<a href="http://videojs.com/html5-video-support/" target="_blank">
+						supports HTML5 video
+					</a>
+				</p>
+			</video>
+		</div>
+		<div class="introduction to-top">
+			<div class="in-head">
+				<p class="in-title fl">直播简介</p>
+				<p class="in-time fl">开播时间：2018-04-21&nbsp;16:21</p>
+			</div>
+			<div class="in-content" id="inCon" style="height: 2.5rem">
+				<p class="in-text"></p>
+				<p class="more2 down">更多
+					<img src="images/more-down.png" class="more">
+				</p>
+			</div>
+		</div>
+		<div class="introduction to-top">
+			<div class="in-head speaker-head">
+				<p class="in-title">主讲人简介</p>
+			</div>
+			<div class="in-content2 speaker-con">
+				<img src="images/speaker.png" class="speaker-photo fl">
+				<div class="speaker-text fl">
+					<p>
+						<span class="text-before">主讲人：</span>
+						<span class="text-after">张筱雨</span>
+					</p>
+					<p>
+						<span class="text-before">单&nbsp;&nbsp;&nbsp;位：</span>
+						<span class="text-after">湖南农业大学农业科学研究院</span>
+					</p>
+					<p>
+						<span class="text-before">简&nbsp;&nbsp;&nbsp;介：</span>
+						<span class="text-after">主讲国家级精品公开视频课《中国茶道》，主编 《中国茶道》，著有《中国茶美学研究—唐宋茶美学思 想与中国当代茶美学建设》。</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="interaction to-top">
+			<div class="in-head speaker-head">
+				<p class="in-title">手机端观看并互动</p>
+			</div>
+			<div class="interaction-con">
+				<canvas id="inCanvas1" width="88" height="88"></canvas>
+				<canvas id="inCanvas2" width="88" height="88"></canvas>
+				<canvas id="inCanvas3" width="88" height="88"></canvas>
+				<hr class="line">
+				<div class="code-box1">
+					<img src="images/QRcode1.png" class="QR-code">
+					<p class="QR-info">扫描二维码
+						<br>下载超星学习通</p>
+				</div>
+				<div class="code-box1 to-left">
+					<img src="images/QRcode1.png" class="QR-code">
+					<p class="QR-info">“学习通”右上角
+						<br>扫描进入直播页面</p>
+				</div>
+				<div class="code-box2">
+					<p>想要带走更多直播内容，请在学习通右上角输入"xxk"，收藏尔雅选修课页面，随时随地，掌握优质课程资源。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function makeCircle(num, ele, color) {
+		var ctx = ele.getContext('2d');
+		ctx.beginPath();
+		ctx.fillStyle = "#dedede";
+		ctx.arc(44, 44, 44, 0, 2 * Math.PI);
+		ctx.fill();
+		ctx.beginPath();
+		ctx.fillStyle = color;
+		ctx.arc(44, 44, 37, 0, 2 * Math.PI);
+		ctx.fill();
+		ctx.beginPath();
+		ctx.fillStyle = "#fff";
+		ctx.font = "31px Arial";
+		ctx.textAlign = "center";
+		ctx.fillText(num, 44, 54);
+		ctx.fill();
+	}
+	var canvas1 = document.getElementById('inCanvas1');
+	var canvas2 = document.getElementById('inCanvas2');
+	var canvas3 = document.getElementById('inCanvas3');
+	makeCircle(1, canvas1, "#FF6D2A");
+	makeCircle(2, canvas2, "#00C1D7");
+	makeCircle(3, canvas3, "#007EBD");
+
+	var info = "茶是天之灵物，地之仙骨，健康之饮！中国茶道是制茶泡茶的技术之道，是传承文明的礼仪之道，更是怡养心灵的修身之道。通过对茶道的历史文化和茶叶科学知识教学，让人们对“茶道”有个正确认识和理解。初步了解选水择器、茶叶泡饮、茶道礼仪等基本技术规范，同时引导审美情趣，树立积极向上的人生态度茶是天之灵物，地之仙骨，健康之饮！中国茶道是制茶泡茶的技术之道，是传承文明的礼仪之道，更是怡养心灵的修身之道。通过对茶道的历史文化和茶叶科学知识教学，让人们对“茶道”有个正确认识和理解。初步了解选水择器、茶叶泡饮、茶是天之灵物，地之仙骨，健康之饮！中国茶道是制茶泡茶的技术之道，是传承文明的礼仪之道，更是怡养心灵的修身之道。通过对茶道的历史文化和茶叶科学知识教学，让人们对“茶道”有个正确认识和理解。初步了解选水择器、茶叶泡饮、茶道礼仪等基本技术规范，同时引导审美情趣，树立积极向上的人生态度茶是天之灵物，地之仙骨，健康之饮！中国茶道是制茶泡茶的技术之道，是传承文明的礼仪之道，更是怡养心灵的修身之道。通过对茶道的历史文化和茶叶科学知识教学，让人们对“茶道”有个正确认识和理解。初步了解选水择器、茶叶泡饮、茶是天之灵物，地之仙骨，健康之饮！中国茶道是制茶泡茶的技术之道，是传承文明的礼仪之道，更是怡养心灵的修身之道。通过对茶道的历史文化和茶叶科学知识教学，让人们对“茶道”有个正确认识和理解。初步了解选水择器、茶叶泡饮、茶道礼仪等基本技术规范，同时引导审美情趣，树立积极向上的人生态度茶是天之灵物，地之仙骨，健康之饮！中国茶道是制茶泡茶的技术之道，是传承文明的礼仪之道，更是怡养心灵的修身之道。通过对茶道的历史文化和茶叶科学知识教学，让人们对“茶道”有个正确认识和理解。初步了解选水择器、茶叶泡饮、";
+
+	$(".in-text").text(info.substr(0, 135) + "…");
+	$(".more2").click(function () {
+		if ($(this).hasClass("down")) {
+			$(".in-text").text(info);
+			$("#inCon").css({ "height": $(".in-text").css("height") });
+			$(this).removeClass("down").html('收起<img src="images/more-up.png" class="more">');
+		} else {
+			$(".in-text").text(info.substr(0, 135) + "…");
+			$("#inCon").css({ "height": $(".in-text").css("height") });
+			$(this).addClass("down").html('更多<img src="images/more-down.png" class="more">');
+		}
+	})
+
+	var options = {};
+	var player = videojs('my-player', options, function onPlayerReady() {
+		videojs.log('Your player is ready!');
+		this.on('ended', function () {
+			videojs.log('Awww...over so soon?!');
+		});
+	});
+	player.ready(function () {
+	});
+
+
+</script>
+
+</html>

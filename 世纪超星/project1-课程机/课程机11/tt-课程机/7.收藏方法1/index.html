@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var dpr = 1 / window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,initial-scale=' + dpr + ',minimum-scale=' + dpr + ',maximum-scale=' + dpr + ',user-scalable=no" />');
+        var w = document.documentElement.clientWidth / 10;
+        var html = document.getElementsByTagName('html')[0];
+        html.style.fontSize = w + 'px';
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/video-js.min.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="head">
+                <div class="left">
+                    <img src="images/top.png" alt="">
+                </div>
+                <div class="right">
+                    <img src="images/dialog.png" alt="">
+                </div>
+                <h3>1.1 生命的基石-细胞</h3>
+            </div>
+        </header>
+         <!-- 视频播放 -->
+         <div class="video-ct">
+            <video id="my-player" class="video-js vjs-big-play-centered" controls preload="auto" poster="./images/video-bgc.png" data-setup='{}'>
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/webm"></source>
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/ogg"></source>
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">
+                        supports HTML5 video
+                    </a>
+                </p>
+            </video>
+            <div class="mask"></div>
+        </div>
+        <ul class="panel">
+            <li> 北京科兴生物制品有限公司（以下简称“北京科兴”）自4月17日起遭受非法暴力侵扰，正常的生产秩序一度停滞，并有员工受到人身伤害，直至今日，未名生物方面仍有约150人轮班占据北京科兴位于上地北大生物城内的办公楼与厂房周围，并强行占据北京科兴财务部门所在的1号办公楼不让北京科兴员工进入。</li>
+            <li>此一突发恶性事件发生后，科兴控股董事长、总裁兼CEO，北京科兴常务副总经理尹卫东第一时间向职能监管部门做情况汇报，并两度通过第三方与未名生物董事长、北京科兴董事长潘爱华电话沟通，寻求通过谈判解决可能存在的问题，均遭到拒绝。</li>
+        </ul>
+        <!-- 视频播放 -->
+        <div class="video-ct">
+            <video id="my-player" class="video-js vjs-big-play-centered" controls preload="auto" poster="./images/video-bgc.png" data-setup='{}'>
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/webm"></source>
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/ogg"></source>
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">
+                        supports HTML5 video
+                    </a>
+                </p>
+            </video>
+            <div class="mask"></div>
+        </div>
+        <!-- <div class="video-ct video-ct2">
+            <div class="mask">
+                <div class="start">
+                    <img src="images/start.png" alt="">
+                </div>
+                <div class="scale">
+                    <img src="images/scale.png" alt="">
+                </div>
+            </div>
+        </div> -->
+        <ul class="panel">
+            <li> 北京科兴生物制品有限公司（以下简称“北京科兴”）自4月17日起遭受非法暴力侵扰，正常的生产秩序一度停滞，并有员工受到人身伤害，直至今日，未名生物方面仍有约150人轮班占据北京科兴位于上地北大生物城内的办公楼与厂房周围，并强行占据北京科兴财务部门所在的1号办公楼不让北京科兴员工进入。</li>
+            <li>此一突发恶性事件发生后，科兴控股董事长、总裁兼CEO，北京科兴常务副总经理尹卫东第一时间向职能监管部门做情况汇报，并两度通过第三方与未名生物董事长、北京科兴董事长潘爱华电话沟通，寻求通过谈判解决可能存在的问题，均遭到拒绝。</li>
+        </ul>
+        <div class="active">
+            <a href="javascript:;"><img src="images/active-bgc.png" alt=""></a>
+        </div>
+        <ul class="panel">
+            <li> 北京科兴生物制品有限公司（以下简称“北京科兴”）自4月17日起遭受非法暴力侵扰，正常的生产秩序一度停滞，并有员工受到人身伤害，直至今日，未名生物方面仍有约150人轮班占据北京科兴位于上地北大生物城内的办公楼与厂房周围，并强行占据北京科兴财务部门所在的1号办公楼不让北京科兴员工进入。</li>
+            <li>此一突发恶性事件发生后，科兴控股董事长、总裁兼CEO，北京科兴常务副总经理尹卫东第一时间向职能监管部门做情况汇报，并两度通过第三方与未名生物董事长、北京科兴董事长潘爱华电话沟通，寻求通过谈判解决可能存在的问题，均遭到拒绝。</li>
+        </ul>
+
+        <div class="mask-layer active">
+            <div class="dialog">
+                <h3>扫描二维码</h3>
+                <div class="app">
+                    <img src="images/code.png" alt="">
+                </div>
+                <div class="mean">
+                    <h4>收藏方法:</h4>
+                    <p>学习通扫描二维码，添加成功后</p>
+                    <p>可在”我的课程“中查看</p>
+                </div>
+                <div class="cancel">
+                    <img src="images/cancel.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/video.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

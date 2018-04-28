@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>JSBridge Test</title>
+	<!-- 引入客户端交互js -->
+<script src="./CXJSBridge.js"></script>
+
+    <script type="text/javascript">
+
+    /**  退出webapp，回到Native应用的首页  */
+    function processQuit()
+    {
+        jsBridge.postNotification('CLIENT_EXIT_WEBAPP',{message:''});
+    };
+    /**  退出webapp 结束  */
+    </script> 
+
+</head>
+<body>
+
+    <div style="margin-top:10px;margin-left:10px;">
+        <input type="button" name="" value="退出" onclick="processQuit()" />
+    </div> 
+</body>
+</html>

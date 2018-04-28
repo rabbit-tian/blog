@@ -1,0 +1,152 @@
+/* 头部导航 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+img{
+  display: block;
+}
+html {
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  overflow: hidden;
+}
+.contain header {
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  font-size: 0.2962963rem;
+  font-weight: 300;
+  z-index: 99;
+}
+.contain header .head {
+  height: 1.38888889rem;
+  line-height: 1.38888889rem;
+  background: #57a4ef;
+  text-align: center;
+  color: #fff;
+}
+.contain header .head .left {
+  float: left;
+  margin: 0.46296296rem 0 0 0.27777778rem;
+}
+.contain header .head .left img {
+  width: 0.46296296rem;
+  height: 0.46296296rem;
+}
+.contain header .head h3 {
+  font-size: 0.46296296rem;
+  letter-spacing: 0.03703704rem;
+}
+.contain header .tab li {
+  float: left;
+  width: 25%;
+  height: 2.03703704rem;
+  text-align: center;
+  font-size: 0.35185185rem;
+  padding: 0.18518519rem 0;
+  border-bottom: 1px solid #ddd;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+  color: #999;
+}
+.contain header .tab li img {
+  width: 0.92592593rem;
+  height: 0.92592593rem;
+  margin-bottom: 0.16666667rem;
+  margin-left: 0.7962963rem;
+}
+.contain header .navbar {
+  border-bottom: 1px solid #ddd;
+  color: #999;
+  background-color: #fff;
+}
+.contain header .navbar li {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 1.2037037rem;
+  line-height: 1.2037037rem;
+  text-align: center;
+}
+.contain header .navbar li.active {
+  color: #64abf0;
+}
+.contain header .navbar li:after {
+  content: "";
+  position: absolute;
+  top: 0.27777778rem;
+  right: 0;
+  width: 0.00925926rem;
+  height: 0.55555556rem;
+  background-color: #e3e5e8;
+}
+.contain header .navbar li:last-child:after {
+  background: none;
+}
+.contain header .triangle-sign {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  height: 0.01851852rem;
+  margin-top: 0.01851852rem;
+  background-color: #64abf0;
+  margin-left: 2%;
+}
+.contain header .triangle-sign:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -0.14814815rem;
+  margin-left: -0.08333333rem;
+  border-bottom: 0.16666667rem solid #64abf0;
+  border-left: 0.16666667rem solid transparent;
+  border-right: 0.16666667rem solid transparent;
+}
+.contain main {
+  overflow: auto;
+}
+.contain main .art {
+  width: 100%;
+  padding: 0.13888889rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.contain main .art.active {
+  display: none;
+}
+.contain main .art li {
+  position: relative;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0.13888889rem;
+}
+.contain main .art li img {
+  width: 100%;
+  height: 3.03703704rem;
+  border: 1px solid #ddd;
+  border-radius: 0.09259259rem;
+}
+.contain main .art li dl {
+  position: absolute;
+  left: 0.13888889rem;
+  right: 0.13888889rem;
+  bottom: 0;
+  height: 0.64814815rem;
+  line-height: 0.64814815rem;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 0.27777778rem;
+  padding: 0 0.31481481rem;
+  font-weight: 100;
+}
+.contain main .art li dl dt {
+  float: left;
+}
+.contain main .art li dl dd {
+  float: right;
+}

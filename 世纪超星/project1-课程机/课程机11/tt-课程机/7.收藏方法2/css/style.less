@@ -1,0 +1,345 @@
+@rem: 108rem;
+/* 重置样式 */
+body,
+dd,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+li,
+ol,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 30 / @rem;
+  font-family: "arial,helvetica,sans-serif";
+  font-weight: 360;
+  color: #555;
+}
+dd,
+dl,
+dt,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+}
+img {
+  display: block;
+  border: 0;
+}
+input,
+button {
+  outline: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 头部video */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html{
+  -webkit-overflow-scrolling: touch
+}
+body{
+  overflow: hidden;
+}
+#container{
+  .head{
+    height: 150/@rem;
+    line-height: 150/@rem;
+    background: #57a4ef;
+    text-align: center;
+    color: #fff;
+    .left{
+      float: left;
+      margin: 50/@rem 0 0 30/@rem;
+      img{
+        width: 50/@rem;
+        height: 50/@rem;
+      }
+    }
+    h3{
+      font-size: 50/@rem;
+      letter-spacing: 4/@rem;
+    }
+  }
+  .video-ct{
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 600/@rem;
+    background: url('../images/video-bgc.png') no-repeat;
+    background-size: 100% 100%; 
+    z-index: 99; 
+    #my-player{
+      width: 100%;
+      height: 100%; 
+      object-fit: contain;
+      .vjs-big-play-button{
+        width: 150/@rem;
+        height: 120/@rem;
+        line-height: 120/@rem;
+        text-align: center;
+        margin-left: -75/@rem;
+        margin-top: -60/@rem;
+        border-radius: 20/@rem;
+        border: none;
+        z-index: 1000;
+        span{
+          font-size: 80/@rem;
+        }
+      }
+    }
+    .mask{
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 600/@rem;
+      background: rgba(0,0,0,.3);
+      z-index: 100;
+      .start{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        img{
+          width: 150/@rem;
+          height: 120/@rem;
+        }
+      }
+      .scale{
+        position: absolute;
+        right: 30/@rem;
+        bottom: 30/@rem;
+        img{
+          width: 60/@rem;
+          height: 60/@rem;
+        }
+      }
+    }
+  }
+  main{
+    overflow: hidden;
+    .course{
+      float: left;
+      width: 40%;
+      // height: calc(100vh - 600/@rem);
+      padding: 40/@rem 20/@rem;
+      box-sizing: border-box;
+      background: url('../images/course-bgc.png') no-repeat;
+      background-size: 100% 100%;
+      overflow: auto;
+      .scroll-course{
+        overflow: hidden;
+        padding: 10/@rem;
+        margin-bottom: 20/@rem;
+      }
+      h3{
+        position: relative;
+        width: 220/@rem;
+        font-size: 36/@rem;
+        text-align: center;
+        border: 4px solid #a27243;
+        padding: 14/@rem 20/@rem;
+        margin-bottom: 20/@rem;
+        box-sizing: border-box;
+        margin-left: 70/@rem;
+        &:after{
+          content: '';
+          position: absolute;
+          left: -15/@rem;
+          bottom: -15/@rem;
+          width: 30/@rem;
+          height: 30/@rem;
+          border: 4px solid #a27243;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+      .part-one{
+        padding: 20/@rem 0;
+        font-weight: 320;
+        .part-head{
+          position: relative;
+          width: 360/@rem;
+          height: 60/@rem;
+          line-height: 60/@rem;
+          padding-left: 70/@rem;
+          border: 1px solid #000;
+          border-radius: 50/@rem;
+          color: #f97101;
+          box-sizing: border-box;
+          background-color: #fff;
+          margin-bottom: 20/@rem;
+          img{
+            position: absolute;
+            width: 60/@rem;
+            height: 60/@rem;
+            left: -10/@rem;
+            top: 0;
+          }
+        }
+        .detail{
+          line-height: 40/@rem;
+          padding: 10/@rem 40/@rem;
+          box-sizing: border-box;
+          li{
+            width: 300/@rem;
+            padding: 10/@rem 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            span{
+              font-style: italic;
+              float: left;
+              margin-right: 10/@rem;
+            }
+            .text{
+              overflow: hidden;
+            }
+            img{
+              width: 330/@rem;
+            }
+          }
+        }
+      }
+    }
+    .describe{
+      float: right;
+      width: 60%;
+      // height: calc(100vh - 600/@rem);
+      padding: 30/@rem 20/@rem;
+      box-sizing: border-box; 
+      font-weight: 300;
+      overflow: auto;
+      .describe-scroll{
+        overflow: hidden;
+        margin-bottom: 20/@rem;
+      }
+      h3{
+        height: 50/@rem;
+        line-height: 50/@rem;
+        color: #4e9fee;
+        font-size: 30/@rem;
+        font-weight: 400;
+      }
+      .app{
+        position: relative;
+        width: 600/@rem;
+        background: url('../images/app-bgc1.png') no-repeat;
+        background-size: 100% 100%;
+        padding: 30/@rem;
+        box-sizing: border-box;
+        margin-bottom: 22/@rem;
+        p{
+          // width: 326/@rem;
+          line-height: 40/@rem;
+          text-indent: 40/@rem;
+          color: #000;
+          font-size: 28/@rem;
+          margin-bottom: 20/@rem;
+        }
+        .amount{
+          height: 80/@rem;
+          line-height: 80/@rem;
+          vertical-align: top;
+          color: #000;  
+          font-size: 32/@rem;
+          img{
+            display: inline-block;
+            width: 36/@rem;
+            height: 36/@rem;
+            vertical-align: middle;
+          }
+          .watch{
+            width: 40/@rem;
+            height: 26/@rem;
+          }
+          span{
+            color: #f97101;
+          }
+          .diff{
+            color: #4e9fee;
+          }
+        }
+        .benfit{
+          position: absolute;
+          right: 20/@rem;
+          bottom: 30/@rem;
+          img{
+            width: 170/@rem;
+            height: 166/@rem;
+          }
+        }
+        .care{
+          position: absolute;
+          right: 40/@rem;
+          bottom: 60/@rem;
+          width: 120/@rem;
+          height: 44/@rem;
+          line-height: 44/@rem;
+          text-align: center;
+          border: 3px solid #4e9fee;
+          color: #4e9fee;
+          font-weight: 400;
+        }
+      }
+      .professor{
+        width: 600/@rem;
+        background: url('../images/app-bgc1.png') no-repeat;
+        background-size: 100% 100%;
+        padding: 30/@rem;
+        box-sizing: border-box;
+        margin-bottom: 22/@rem;
+        h3{
+          span{
+            color: #555;
+            font-weight: 360;
+            font-size: 28/@rem;
+          }
+        }
+        p{
+          height: 40/@rem;
+          line-height: 40/@rem;
+          font-size: 28/@rem;
+          b{
+            font-weight: 380;
+          }
+        }
+      }
+      .introduction{
+        width: 600/@rem;
+        background: url('../images/app-bgc1.png') no-repeat;
+        background-size: 100% 100%;
+        padding: 30/@rem;
+        box-sizing: border-box;
+        margin-bottom: 22/@rem;
+        p{
+          text-indent: 40/@rem;
+        }
+      }
+    }
+  }
+}

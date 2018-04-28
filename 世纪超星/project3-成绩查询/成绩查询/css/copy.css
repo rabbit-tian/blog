@@ -1,0 +1,141 @@
+#contain header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: .88rem;
+  line-height: .88rem;
+  text-align: center;
+  padding: 0 .3rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  font-size: .32rem;
+  color: #333;
+  z-index: 99;
+  background-color: #fff;
+}
+#contain header .back img {
+  width: .2rem;
+  height: .36rem;
+  margin-top: .26rem;
+}
+#contain header .more img {
+  width: .4rem;
+  height: .1rem;
+  margin-top: .4rem;
+}
+#contain main {
+  margin-top: .88rem;
+}
+#contain main .head {
+  Height: 1.24rem;
+  background-color: #fff4d9;
+  border-bottom: 1px solid #ddd;
+  padding: .16rem .3rem;
+  box-sizing: border-box;
+}
+#contain main .head h3 {
+  height: .5rem;
+  line-height: .5rem;
+  font-size: .28rem;
+  color: #333;
+  font-weight: 420;
+}
+#contain main .head .mark {
+  height: .42rem;
+  line-height: .42rem;
+}
+#contain main .head .mark li {
+  float: left;
+  font-size: .24rem;
+  font-weight: 300;
+}
+#contain main .head .mark li span {
+  color: #4e9fee;
+}
+#contain main .head .mark li b {
+  font-weight: 300;
+  color: #df5c57;
+}
+#contain main .search {
+  height: .86rem;
+  line-height: .86rem;
+  padding: 0 .3rem;
+  background-color: #fff;
+}
+#contain main .search li {
+  width: 1.58rem;
+  text-align: center;
+  font-size: .3rem;
+  font-weight: 340;
+}
+#contain main .search li span {
+  display: inline-block;
+  vertical-align: middle;
+}
+#contain main .search li span img {
+  width: .2rem;
+  height: .1rem;
+  vertical-align: middle;
+  margin-left: .08rem;
+}
+#contain main .search .fr {
+  width: 3rem;
+}
+#contain main .search .fr input {
+  width: 3rem;
+  height: .56rem;
+  line-height: .56rem;
+  text-align: center;
+  background: #eeeeee url('../images/search.png') no-repeat;
+  background-position: .8rem .1rem;
+  background-size: .3rem .3rem;
+  font-weight: 340;
+  color: #333;
+  font-size: .28rem;
+  border: none;
+  border-radius: .28rem;
+}
+#contain main .search .first-line {
+  position: relative;
+}
+#contain main .search .first-line:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: .2rem;
+  width: 1px;
+  height: .5rem;
+  background-color: #cdcdcd;
+}
+#contain main .score .detail {
+  width: 100%;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-size: .3rem;
+  overflow: hidden;
+}
+#contain main .score .detail li {
+  float: left;
+  width: 20%;
+  height: .86rem;
+  line-height: .86rem;
+  text-align: center;
+  border-right: 1px solid #eee;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background-color: #fff;
+  font-weight: 300;
+}
+#contain main .score .detail li img {
+  display: inline-block;
+  width: .2rem;
+  height: .1rem;
+  vertical-align: middle;
+}
+#contain main .score .detail li:last-child {
+  border-right: none;
+}
+#contain main .score .top li {
+  background-color: #f1f7fe;
+}

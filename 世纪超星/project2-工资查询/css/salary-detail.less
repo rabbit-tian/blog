@@ -1,0 +1,108 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    overflow: auto;
+}
+#contain{
+    header{
+       position: fixed;
+       left: 0;
+       right: 0;
+       top: 0;
+       height: .88rem;
+       line-height: .88rem;
+       text-align: center;
+       padding: 0 .3rem;
+       box-sizing: border-box;
+       border-bottom: 1px solid #ddd;
+       font-size: .32rem;
+       color: #333;
+       z-index: 99;
+       background-color: #fff;
+       .back{
+           img{
+               width: .2rem;
+               height: .36rem;
+               margin-top: .26rem;
+           }
+       }
+    }
+    main{
+        margin-top: .88rem;
+        background-color: #fff;
+        box-sizing: border-box;
+        .show{
+            position: relative;
+            width: 100%;
+            height: 4.28rem;
+            background: url('../images/2.bgc.png') no-repeat;
+            background-size: 100% 100%;
+            color: #fff;
+            .pay{
+                text-align: center;
+                font-size: .4rem;
+                padding-top: 1rem;
+                box-sizing: border-box;
+                h4{
+                    height: .6rem;
+                    line-height: .6rem;
+                    font-weight: 300;
+                }
+                span{
+                    font-weight: 300;
+                    font-size: .36rem;
+                }
+            }
+            .bot{
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: .9rem;
+                font-weight: 200;
+                background: rgba(255,255,255,.2);
+                padding-top: .12rem;
+                box-sizing: border-box;
+                dt{
+                    height: .4rem;
+                    line-height: .4rem;
+                }
+                dd{
+                    font-weight: 200;
+                }
+                .left{
+                    width: 50%;
+                    text-align: center;
+                }
+                .right{
+                    width: 50%;
+                    text-align: center;
+                }
+                .line{
+                    position: absolute;
+                    left: 50%;
+                    top: .14rem;
+                    width: 1px;
+                    background-color: #f1f1f1;
+                    height: .6rem;
+                }
+            }
+        }
+        ul{
+            font-size: .26rem;
+            color: #414141;
+            li{
+                height: .88rem;
+                line-height: .88rem;
+                padding: 0 .3rem;
+                box-sizing: border-box;
+                border-bottom: 1px solid #e5e5e5;
+                font-size: #333;
+                b{
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
