@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #circle {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle">你好</div>
+    <script src="jquery.min.js"></script>
+    <script>
+        $("#circle").on("mousedown", function (e) {
+            console.log(11);
+            let startX = e.clientX - $(this).offset().left;
+            $(this).setCapture && $(this).setCapture();
+
+            $(document).on("mousemove", function (event) {
+                console.log(22);
+                $("#circle").css("left", event.clientX - startX + "px");
+            });
+
+            $(document).on("mouseup", function (e) {
+                console.log(33);
+                $(document).off("mousemove");
+                $("#circle").releaseCapture && $("#circle").releaseCapture();
+            });
+            return false;
+        }); 
+    </script>
+</body>
+
+</html>
