@@ -30,4 +30,18 @@
 
 ### swiper 的使用
 
+### 大屏机适配问题
+- 根据设计稿大小设置fontSize
+
+```
+(function(){
+    var calc = function(){
+        var docElement = document.documentElement;
+        var clientWidthValue = docElement.clientWidth > 1080 ? 1080 : docElement.clientWidth;
+        docElement.style.fontSize = 100*(clientWidthValue/1080) + 'px';
+    };
+    calc();
+    window.addEventListener('resize',calc);
+})();
+```
 
