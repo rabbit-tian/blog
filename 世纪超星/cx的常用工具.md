@@ -54,3 +54,12 @@ $(window).resize(function() {
 })
 ```
 
+## video 的使用
+1. 全屏播放
+    
+    ```
+     webkit-playsinline="true"
+     x5-video-player-type="h5"
+     x5-video-player-fullscreen="true"
+    ```
+
