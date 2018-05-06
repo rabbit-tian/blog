@@ -63,3 +63,6 @@ $(window).resize(function() {
      x5-video-player-fullscreen="true"
     ```
 
+### 代码书写
+1. 要分块管理代码，比较好维护
+
