@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <style>
+        .echarts {
+            width: 500px;
+            height: 400px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="echarts" id="bar"></div>
+    <script>
+
+        var bar = echarts.init(document.getElementById("bar"));
+        option = {
+            title: {
+                text: '某站点用户访问来源', // 大标题
+                subtext: '纯属虚构', // 小标题
+                x: 'left',
+                textStyle: {
+                    color: "green",
+                    fontSize: 14
+                }
+            },
+            tooltip: { // 提示框，鼠标悬浮交互时的信息提示
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: { //   图例：左边一排说明
+                // orient: 'vertical', // 排列形式 : 纵向 ，默认横向 horizontal
+                x: 'right',
+                data: ['直接访问', '邮件营销', '联盟广告']
+            },
+            // toolbox: { //右侧工具
+            //     show: true,
+            //     feature: {
+            //         mark: { show: true },
+            //         dataView: { show: true, readOnly: false },
+            //         magicType: {
+            //             show: true,
+            //             type: ['pie', 'funnel'],
+            //             option: {
+            //                 funnel: {
+            //                     x: '25%',
+            //                     width: '50%',
+            //                     funnelAlign: 'left',
+            //                     max: 1548
+            //                 }
+            //             }
+            //         },
+            //         restore: { show: true },
+            //         saveAsImage: { show: true }
+            //     }
+            // },
+            calculable: true, // 拖拽后重新计算
+            series: [
+                {
+                    name: '访问来源',
+                    type: 'pie', // 整个圆 'pie'
+                    radius: '55%', // 控制饼图圆大小
+                    center: ['50%', '60%'], // 控制饼图位置
+                    data: [
+                        { value: 335, name: '直接访问', itemStyle: { color: "red" } },
+                        { value: 310, name: '邮件营销', itemStyle: { color: "yellow" } },
+                        { value: 234, name: '联盟广告', itemStyle: { color: "green" } },
+                        // { value: 135, name: '视频广告' },
+                        // { value: 1548, name: '搜索引擎' }
+                    ],
+                    labelLine: { // 去除指示线
+                        normal: {
+                            show: true
+                        }
+                    },
+                    label: { // 改变显示的字改成百分比
+                        normal: {
+                            formatter: "{d}%", // 显示数字 {c}
+                            show: true,
+                            // position: 'inner',//文字显示位置
+                            textStyle: {
+                                fontSize: '14',
+                                fontWeight: 'normal'
+                            }
+                        }
+                    },
+                }
+            ]
+        };
+        // 为echarts对象加载数据 
+        bar.setOption(option); 
+    </script>
+</body>
+
+</html>

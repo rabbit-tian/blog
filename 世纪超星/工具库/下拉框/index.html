@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css">
+    <script src="js/responsive.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <style lang="">
+        .selectDate {
+            height: .87rem;
+            background: -webkit-linear-gradient(top, transparent 50%, #d9d9d9 50%) center bottom no-repeat;
+            background-size: 100% 1px;
+            position: relative;
+        }
+
+        .selectDate a {
+            display: block;
+            font-size: .3rem;
+        }
+
+        .selectDate span {
+            display: block;
+            float: left;
+            line-height: .87rem;
+            margin: 0 .3rem;
+        }
+
+        .selectTimeWrap {
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            line-height: .9rem;
+            display: block;
+            width: 2.15rem;
+            right: 0;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: .35rem;
+            color: #333;
+        }
+
+        .selectTime {
+            font-size: .3rem;
+        }
+
+        .selectTime img {
+            vertical-align: middle;
+            width: .23rem;
+            height: .13rem;
+        }
+
+        .selectTime img {
+            display: inline-block;
+            -webkit-transition: -webkit-transform 500ms;
+        }
+
+        .slideUp img {
+            -webkit-transform: rotate(180deg);
+        }
+
+        .selectTimeList {
+            position: absolute;
+            width: 1.8rem;
+            z-index: 99;
+            margin-top: 0.02rem;
+            right: .1rem;
+            margin-left: -1.18rem;
+            display: none;
+            top: 0.758rem;
+        }
+
+        .selectTimeList ul {
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            margin-top: .15rem;
+            background: #ffffff;
+            position: relative;
+        }
+
+        .selectTimeList ul i {
+            border-color: rgba(194, 225, 245, 0);
+            border-bottom-color: #cccccc;
+            border-width: 0.14rem;
+            margin-left: -0.14rem;
+        }
+
+        .selectTimeList ul:after,
+        .selectTimeList ul:before {
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .selectTimeList ul:after {
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #ffffff;
+            border-width: 0.12rem;
+            margin-left: -0.12rem;
+        }
+
+        .selectTimeList ul:before {
+            border-color: rgba(194, 225, 245, 0);
+            border-bottom-color: #cccccc;
+            border-width: 0.14rem;
+            margin-left: -0.14rem;
+        }
+
+        .selectTimeList ul li {
+            font-size: .3rem;
+            color: #333333;
+            background: -webkit-linear-gradient(top, transparent 50%, #d9d9d9 50%) center bottom no-repeat;
+            background-size: 100% 1px;
+        }
+
+        .selectTimeList ul li:last-child {
+            background-size: 100% 0px;
+        }
+
+        .selectTimeList ul li img {
+            width: .24rem;
+            height: .17rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="selectDate">
+        <a href="">
+            <span>选择查看日期</span>
+            <span>2017年11月26日</span>
+        </a>
+        <div class="selectTimeWrap">
+            <div class="selectTime ">
+                <em>全天</em>
+                <img src="img/slideUp.png" alt="">
+            </div>
+            <div class="selectTimeList">
+                <ul>
+                    <li>全天
+                        <img src="img/select.png" alt="" style="display: inline-block">
+                    </li>
+                    <li>上午
+                        <img src="img/select.png" alt="">
+                    </li>
+                    <li>下午
+                        <img src="img/select.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".workDate,.selectTime").click(function (e) {
+                $(this).next().slideToggle(500);
+                $(this).stop().toggleClass('slideUp');
+                e.stopPropagation();
+            });
+            $(".workDateList li").click(function () {
+                $(".workDateList li img").hide();
+                $(this).find('img').show();
+                $(".workDate").removeClass('slideUp');
+            });
+            $(".selectTimeList li").click(function () {
+                $(".selectTimeList li img").hide();
+                $(this).find('img').show();
+                var text = $(this).text();
+                console.log(text);
+                $(".selectTime em").html(text);
+                $(".selectTime").removeClass('slideUp');
+            });
+            $(document).click(function (e) {
+                $(".workDateList").slideUp();
+                $(".selectTimeList").slideUp();
+                e.stopPropagation();
+            });
+        })
+    </script>
+</body>
+
+</html>
