@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="liMarquee.css">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery.liMarquee.js"></script>
+    <style>
+        .box{
+            width: 500px;
+            height: 100px;
+            margin: 30px auto;
+            border: 1px solid #ccc;
+        }
+        #ct{
+            height: 100px;
+            overflow: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul id="ct">
+            <li>生命在于运动11111111111111</li>
+            <li>生命在于运动22222222222222</li>
+            <li>生命在于运动3333333333333</li>
+            <li>生命在于运动444444444444444</li>
+            <li>生命在于运动5555555555555555</li>
+            <li>生命在于运动66666666666666</li>
+            <li>生命在于运动777777777777777777</li>
+            <li>生命在于运动8888888888</li>
+            <li>生命在于运动9999999999</li>
+        </ul>
+    </div>
+    <script>
+        $('#ct').liMarquee({
+            direction: "up",
+            drag: false
+        })
+    </script>
+</body>
+</html>

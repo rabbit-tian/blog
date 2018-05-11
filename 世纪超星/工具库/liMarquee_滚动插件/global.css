@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+body,
+form,
+textarea,
+select,
+option,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dt,
+dd,
+menu,
+blockquote,
+fieldset,
+legend,
+button,
+input,
+hr,
+pre,
+div,
+input,
+span,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: " 微软雅黑";
+  font-size: 12px;
+  /* color: #fff; */
+}
+ul,
+ol,
+img {
+  border: 0px;
+}
+li {
+  list-style: none;
+}
+input,
+select,
+textarea {
+  vertical-align: middle;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
