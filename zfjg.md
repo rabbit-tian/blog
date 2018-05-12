@@ -62,5 +62,11 @@
 1. promise 是一种异步流程的控制手段
 2. promise的链式调用：解决回调地狱
 3. promise 可以支持多个并发请求，获取并发请求的数据
-4. promise本身不是异步的
+4. promise本身不是异步的，里面的then方法是异步的
+5. Promise关键字
+    - resolve： 成功
+    - reject：失败
+    - pending：等待
+6. 一但promise成功了，就不能失败，相反也是一样的
+
 
