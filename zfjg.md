@@ -68,5 +68,12 @@
     - reject：失败
     - pending：等待
 6. 一但promise成功了，就不能失败，相反也是一样的
+7. promise 实现的链式调用并不是返回的this，而是返回一个新的promise
+8. then
+    - 如果返回的是一个普通值，就会走到下一个then中的成功回调
+    - 如果有错误产生会走失败的回调
+9. catch: 
+10. Promise.all：按请求顺序执行，，都成功才成功
+11. Promise.race: 谁先回来谁就先执行
 
 
