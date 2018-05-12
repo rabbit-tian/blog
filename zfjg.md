@@ -37,7 +37,24 @@
 
 ### es6的类
 1. 类的继承
-    - 公有属性
+    - 公有属性: 
+        - 方法一：Child.prototype.__proto__ = Parent.prototype
+        - 方法二：
+            - Child.prototype = Object.create(Parent.prototype,{constructor: {value:Child}}) 
+            
     - 私有属性： Parent.call(this)
     - 静态方法
+
+2. class
+    - 类智能new
+    - 类可以继承 公有，私有，静态方法
+    - 父类的构造函数中返回一个引用类型，子类会把这个引用类型作为子类的this
+    
+    ```
+    class Child extends Parent {{
+        constructor() {
+            super(); // 相当于call，继承私有属性
+        }
+    }
+    ```
 
