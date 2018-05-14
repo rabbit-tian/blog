@@ -66,3 +66,10 @@ $(window).resize(function() {
 ### 代码书写
 1. 要分块管理代码，比较好维护
 
+### 关于1px线的问题
+
+```
+.line{background: -webkit-linear-gradient(top,transparent 50%,#e5e5e5 50%) center bottom no-repeat;    background-size: 100% 1px;}.after-scale{    position: relative;}.after-scale:after{    content:"";  position: absolute;    bottom:0;  left:0;  right:0;    border-bottom:1px solid #c8c7cc;    -webkit-transform:scaleY(.5);    -webkit-transform-origin:0 0;}
+```
+
+
