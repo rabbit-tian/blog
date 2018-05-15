@@ -254,5 +254,45 @@
         }
     }
     ```
+2. event 对象
+    - 和普通浏览器一样，事件监听函数会被自动传入一个 event 对象，这个对象和普通的浏览器 event 对象所包含的方法和属性都基本一致。不同的是 React.js 中的 event 对象并不是浏览器提供的，而是它自己内部所构建的。React.js 将浏览器原生的 event 对象封装了一下，对外提供统一的 API 和属性
+    - 每次点击的时候就会打印  ”React 小书“。
+    
+    ```
+    class Title extends Component {
+      handleClickOnTitle (e) {
+        console.log(e.target.innerHTML)
+      }
+    
+      render () {
+        return (
+          <h1 onClick={this.handleClickOnTitle}>React 小书</h1>
+        )
+      }
+    }
+    ```
 
+3. 关于事件中的 this
+    - 在上面的 handleClickOnTitle 中把 this 打印出来，你会看到 this 是 null 或者 undefined。
+
+        ```
+        handleClickOnTitle (e) {
+            console.log(this) // => null or undefined
+        }
+        ```
+    - 如果你想在事件函数当中使用当前的实例，你需要手动地将实例方法 bind 到当前实例上再传入给 React.js。
+        
+        ```
+        // this的正确姿势
+        class Title extends Component {
+            isClick (e) {
+                console.log(this) 
+            }
+            render () {
+                return (
+                    <h1 onClick = {this.isClick.bind(this)}>Tian</h1>
+                )
+            }
+        }
+        ```
 
