@@ -106,7 +106,8 @@
     
     ```
     render () {
-        let special = 'nice';
+        const special = 'nice';
+        const className = 'header'
         return (
             <div className={className}>
                 <h1>Tian {special}</h1>
@@ -117,5 +118,25 @@
     
     - {} 内可以放任何 JavaScript 的代码，包括变量、表达式计算、函数执行等等
     - 表达式插入不仅仅可以用在标签内部，也可以用在标签的属性上
+        - 注意：因为 class 是 JavaScript 的关键字，所以 React.js 中定义了一种新的方式：className 来帮助我们给元素添加类名
+        - 还有一个特例就是 for 属性，例如 <label for='male'>Male</label>，因为 for 也是 JavaScript 的关键字，所以在 JSX 用 htmlFor 替代
 
+    - {} 上面说了，JSX 可以放置任何表达式内容。所以也可以放 JSX
+    
+    ```
+    render () {
+      const isGoodWord = true
+      return (
+        <div>
+          <h1>
+            React 小书
+            {isGoodWord
+              ? <strong> is good</strong>
+              : <span> is not good</span>
+            }
+          </h1>
+        </div>
+      )
+    }
+    ```
 
