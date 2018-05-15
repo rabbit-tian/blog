@@ -284,6 +284,7 @@
         
         ```
         // this的正确姿势
+        // bind 会把实例方法绑定到当前实例上，然后我们再把绑定后的函数传给 React.js 的 onClick 事件监听
         class Title extends Component {
             isClick (e) {
                 console.log(this) 
