@@ -237,4 +237,22 @@
     )
 
     ```
+    
+### 事件监听
+1. 你只需要给需要监听事件的元素加上属性类似于 onClick、onKeyDown 这样的属性
+    
+    ```
+    // 事件监听
+    class Title extends Component {
+        isCLick() {
+            console.log(11);
+        }
+        render () {
+            return (
+                <h1 onClick = {this.isCLick}> Tian</h1>
+            )
+        }
+    }
+    ```
+
 
