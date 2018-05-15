@@ -86,4 +86,33 @@
         - react-dom 负责把这个用来描述 UI 信息的 JavaScript 对象变成 DOM 元素，并且渲染到页面上。
 
 ### 组件的 render 方法
+1. render 基础
+    - 一个组件类必须要实现一个 render 方法，这个 render 方法必须要返回一个 JSX 元素
+    - 要注意的是，必须要用一个外层的 JSX 元素把所有内容包裹起来
+    - 返回并列多个 JSX 元素是不合法的，必须要用一个外层元素把内容进行包裹：
+    
+    ```
+    render () {
+      return (
+        <div>
+          <div>第一个</div>
+          <div>第二个</div>
+        </div>
+      )
+    }
+    ```
+2. 表达式插入
+    - 在 JSX 当中你可以插入 JavaScript 的表达式，表达式返回的结果会相应地渲染到页面上。表达式用 {} 包裹
+    
+    ```
+    render () {
+        let special = 'nice';
+        return (
+            <div>
+                <h1>Tian {special}</h1>
+            </div>
+        )
+    }
+    ```
+
 
