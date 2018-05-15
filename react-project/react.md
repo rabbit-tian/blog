@@ -108,11 +108,14 @@
     render () {
         let special = 'nice';
         return (
-            <div>
+            <div className={className}>
                 <h1>Tian {special}</h1>
             </div>
         )
     }
     ```
+    
+    - {} 内可以放任何 JavaScript 的代码，包括变量、表达式计算、函数执行等等
+    - 表达式插入不仅仅可以用在标签内部，也可以用在标签的属性上
 
 
