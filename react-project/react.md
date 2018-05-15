@@ -162,4 +162,79 @@
         }
     }
     ```
+        - 我们可以直接在 Header 标签里面直接使用 Title 标签
+        ```
+        <div>
+          <Title />
+          <Title />
+          <Title />
+        </div>
+        ```
+        
+        - 注意：自定义的组件都必须要用大写字母开头，普通的 HTML 标签都用小写字母开头。
+
+2. 现在让组件多起来。我们来构建额外的组件来构建页面，假设页面是由 Header 、Main 、Footer 几个部分组成，由一个 Index 把它们组合起来。
+    
+    ```
+    import React,{Component} from 'react';
+    import ReactDOM from 'react-dom';
+
+    // 标题
+    class Title extends Component {
+        render () {
+            return (
+                <h1>Tian</h1>
+            )
+        }
+    }
+    // 头部
+    class Header extends Component {
+        render () {
+            return (
+                <div>
+                    <Title/>
+                    <h2>this is header</h2>
+                </div>
+            )
+        }
+    }
+    // 主体
+    class Main extends Component {
+        render () {
+            return (
+                <div>
+                    <h2>this is content</h2>
+                </div>
+            )
+        }
+    }
+    // 底部
+    class Footer extends Component {
+        render () {
+            return (
+                <div>
+                    <h2>this is footer</h2>
+                </div>
+            )
+        }
+    }
+
+    // 整合到 Index
+    class Index extends Component {
+        render () {
+            return (
+                <div>
+                    <Header/>
+                    <Main />
+                    <Footer />
+                </div>
+            )
+        }
+    }
+    ReactDOM.render(
+        <Index />,
+        document.getElementById('root')
+    )
+
+    ```
 
