@@ -140,3 +140,26 @@
     }
     ```
 
+### 组件的组合、嵌套和组件树
+1. 现在我们已经有了 Header 组件了。假设我们现在构建一个新的组件叫 Title，它专门负责显示标题。你可以在 Header 里面使用 Title组件：
+    
+    ```
+    class Title extends Component {
+        render () {
+            return (
+                <h1>React 小书</h1>
+            )
+        }
+    }
+    
+    class Header extends Components {
+        render () {
+            return (
+                <div>
+                    <Title />
+                </div>
+            )
+        }
+    }
+    ```
+
