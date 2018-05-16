@@ -39,6 +39,13 @@ console.dir(Array.prototype,{showHidden: true});
 // 比promise中的then 快
 
 
+// 6.顺序
+// setTimeout 和 setImmediate 顺序不能确定
+// nextTick 是插空执行  timer=> check
+
+
+
+
 // progress 进程
     // argv 执行时的参数
     // env 环境变量 ：比如开发环境的错误提示
@@ -53,3 +60,6 @@ console.dir(Array.prototype,{showHidden: true});
 // setInterval
 
 // 文件中还增加了几个全局属性
+
+
+// 调试的方式
