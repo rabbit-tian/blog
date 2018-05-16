@@ -1,7 +1,7 @@
 // global：全局对象
 console.log(global);
 
-// console
+// 1. console
 // process.stdout
 // 标准输出 代号1
 console.log('log');
@@ -18,11 +18,25 @@ for (var i = 0;i<1000;i++) {
 }
 console.timeEnd('a');
 
+
 // 断言
 console.assert((1+1) == 2,'hello');
 
+// 显示隐藏属性
+console.dir(Array.prototype,{showHidden: true});
 
 
+// 2. progress.argv
+
+// 3. progress.env 创建环境
+// mac  export
+// 可以根据环境变量打出对应url
+
+// 4. progress.chdir('./4.node)
+// 改变当前到 本目录下 (默认是根目录)
+
+// 5. process.nextTick 微任务（比宏任务快）
+// 比promise中的then 快
 
 
 // progress 进程
