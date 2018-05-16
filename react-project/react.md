@@ -285,15 +285,18 @@
         ```
         // this的正确姿势
         // bind 会把实例方法绑定到当前实例上，然后我们再把绑定后的函数传给 React.js 的 onClick 事件监听
+        // 可以在 bind 的时候给事件监听函数传入一些参数：
         class Title extends Component {
-            isClick (e) {
-                console.log(this) 
+            isClick (word,e) {
+                console.log(this,word) 
             }
             render () {
                 return (
-                    <h1 onClick = {this.isClick.bind(this)}>Tian</h1>
+                    <h1 onClick = {this.isClick.bind(this,'hello')}>Tian</h1>
                 )
             }
         }
         ```
+
+### 组件的 state 和 setState
 
