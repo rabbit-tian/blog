@@ -102,6 +102,44 @@
 
 
 ### 关于那些参数
-1. 
+1. 图形位置
+    - 树状图和折线图位置 =>grid
+    
+    ```
+    grid: {
+      // 整个树状图位置
+      left: "5%",
+      right: "5%",
+      top: "10%",
+      containLabel: true,
+      height: 220
+    },
+    ```
+    - 饼状图位置 
+        - `center: ["48%", "50%"],`
+        
+2. 树状图柱子的宽度
+    - `barWidth: 24`
 
+3. 控制饼图的大小
+    - `radius: [0,"50%"]`
+
+4. x轴
+    - 刻度线显示与否: `axisTick: {show: false}`
+    - 坐标轴线颜色: `axisLine: {lineStyle: {color: "#E7E9EC"}}`
+
+5. y轴
+    - 网格线的格式
+        
+        ```
+        splitLine: {
+          //网格线的格式
+          show: true,
+          lineStyle: {
+            color: "#F0F2F3", //网格线颜色
+            width: 1, //网格线宽度
+            type: "solid" //网格线样式
+          }
+        },
+        ```
 
