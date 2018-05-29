@@ -1,0 +1,28 @@
+#contain {
+  width: 100%;
+}
+#contain .head {
+  position: relative;
+  height: .88rem;
+  line-height: .88rem;
+  text-align: center;
+}
+#contain .head h3 {
+  font-size: .36rem;
+  font-weight: normal;
+}
+#contain .head .back {
+  position: absolute;
+  left: .2rem;
+  top: 0;
+}
+#contain .head .back img {
+  display: inline-block;
+  width: .4rem;
+  height: .4rem;
+  vertical-align: middle;
+}
+#contain .head .back span {
+  vertical-align: middle;
+  font-size: .32rem;
+}
